@@ -1,0 +1,36 @@
+$blanco: #fff;
+$background: #D9D9D9;
+$downorange: #D9C7BB;
+
+@import "presets";
+
+
+
+
+@media (min-width: 1024px){
+
+@import "grid-di";
+@import "services-di";
+}
+
+
+
+@media(max-width: 1023px) and (min-width: 602px){
+
+@import "grids-ti";
+@import "services-ti";
+
+}
+
+@media(max-width: 601px) and (min-width: 350px){
+
+@import "grid-pi";
+@import "services-pi";
+
+}
+ 
+@media(max-width: 349px){
+    @import "closed-display";
+}
+
+  

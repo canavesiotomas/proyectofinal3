@@ -1,0 +1,99 @@
+.bodyServices{
+  
+    display: grid;
+    grid-template-areas: 
+    
+    "navBar"
+    "title"
+    "sCard"
+    "feet"
+
+    ;
+
+    grid-template-columns: 100%;
+
+
+   }
+
+
+
+
+.sectionTitle{
+    grid-area: title;
+}
+
+.t4{
+    text-align: center;
+    background-color: $downorange;
+    width: 100%;
+    font-size: 3rem;
+    margin-top: 0.5vh;
+    padding-top: 10%;
+}
+
+#sCard{
+    grid-area: sCard;
+    background-color: $downorange;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+  }
+  
+.titleServices{
+    text-align: center;
+    margin: 10vh;
+    padding: 3vh;
+    font-size: 3rem;
+  }
+  
+  
+  
+.sFlexCard{
+    
+    width: 10vh;
+    background-color: $background;
+    border-radius: 20px;
+    margin-bottom: 30vh;
+    margin-top: 30vh;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+
+  
+  .sContentCard{
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10%;
+    padding: 3%;
+  }
+  
+  
+  
+  
+.sPhoto{
+    width: 35vh;
+    margin: 10%;
+    padding: 7.5%;
+    
+  }
+  
+.t2{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1vh;
+  }
+  
+.p2{
+    font-size: large;
+    text-align: center;
+  }
+  
+  

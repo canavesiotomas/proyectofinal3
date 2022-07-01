@@ -1,0 +1,933 @@
+/*Presets*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: content-box;
+}
+
+h1 {
+  padding: 3%;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: medium;
+}
+
+body {
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+a:hover {
+  animation-name: color;
+  animation-duration: 1s;
+}
+
+.boton1, .boton3, .boton2 {
+  width: 20%;
+  height: 10%;
+  background-color: orangered;
+}
+.boton1:hover, .boton3:hover, .boton2:hover {
+  border: 1px inset #000;
+}
+
+.boton2 {
+  background-color: blue;
+}
+
+.boton3 {
+  background-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .gridBody {
+    display: grid;
+    grid-template-areas: "navBar" "head" "card" "photo" "map" "contact" "feet";
+    grid-template-rows: 0.25fr 0.25fr 2fr auto 2fr auto 0.5fr;
+  }
+  .head {
+    grid-area: head;
+    width: 100%;
+    margin-top: 0.5vh;
+    background-color: #fff;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .largeLogo {
+    width: 20%;
+  }
+  .flexNav {
+    grid-area: navBar;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .spanIndex {
+    color: blue;
+    background-color: rgba(230, 230, 230, 0.082);
+    border-radius: 20px;
+    border: inset black 2px;
+    font-size: medium;
+    padding: 3%;
+    margin: 5%;
+  }
+  .spanIndex:hover {
+    color: #fff;
+    animation-name: color;
+    animation-duration: 1s;
+  }
+  .flexSpan {
+    width: 60vh;
+    display: flex;
+    justify-content: center;
+  }
+  .smallLogo {
+    display: none;
+  }
+  section#cardS {
+    width: 100%;
+    margin-top: 0.5vh;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .pCard {
+    margin: 3%;
+    pad: 3%;
+  }
+  .flexCard {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #C4C4C4;
+  }
+  .flexCard:hover {
+    box-shadow: 5px 5px 5px 5px rgb(51, 49, 49);
+  }
+  .cardPhoto {
+    width: 80%;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 20px;
+  }
+  .cardText {
+    width: 80%;
+    margin: 5vh;
+    padding: 5vh;
+  }
+  .t1 {
+    text-align: center;
+  }
+  /*Map*/
+  section#map {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5vh;
+    grid-area: map;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .textMap {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+  }
+  .t3 {
+    font-size: 3rem;
+    margin: 10%;
+    padding: 3%;
+  }
+  .p3 {
+    margin: 10%;
+    font-size: large;
+  }
+  .mapIframe {
+    width: 50%;
+    height: 75%;
+  }
+  .iframe {
+    width: 70%;
+    height: 75%;
+    padding: 10%;
+    margin: 5%;
+    border-radius: 20px;
+  }
+  /*contact*/
+  section#contact {
+    margin-top: 0.5vh;
+    width: 100%;
+    grid-area: contact;
+    background-image: url(../sources/gallery/planta.png);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .bContact {
+    margin: 2%;
+    padding: 2%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 50%;
+    text-decoration: double;
+    font-size: 2rem;
+  }
+  .bContact:hover {
+    border: 2px solid #000;
+    background-color: black;
+  }
+  .bName {
+    text-align: center;
+    color: #fff;
+  }
+  /*Gallery Index*/
+  section#photos {
+    width: 100%;
+    margin-top: 0.5vh;
+    grid-area: photo;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #D9C7BB;
+    justify-content: center;
+  }
+  .galleryIndex {
+    width: 20%;
+    padding: 2vh;
+    margin: 3vh;
+  }
+  .galleryIndex:hover {
+    filter: opacity(60%);
+  }
+  /*Footer*/
+  .footerFlex {
+    grid-area: feet;
+    margin-top: 0.5vh;
+    background-color: #D9C7BB;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerLogo {
+    width: 25%;
+    margin-left: 10%;
+    padding: 5%;
+  }
+  .logoF {
+    width: 50%;
+  }
+  .linksF {
+    width: 50%;
+    text-decoration: underline 1px;
+  }
+  .footerL {
+    padding: 3%;
+    margin: 5%;
+  }
+  @keyframes color {
+    15% {
+      color: orangered;
+    }
+    75% {
+      color: blue;
+    }
+  }
+  .bodyServices {
+    display: grid;
+    grid-template-areas: "navBar" "title" "sCard" "feet";
+    grid-template-columns: 100%;
+  }
+  .sectionTitle {
+    grid-area: title;
+  }
+  .t4 {
+    text-align: center;
+    background-color: #D9C7BB;
+    width: 100%;
+    font-size: 3rem;
+    margin-top: 0.5vh;
+    padding-top: 10%;
+  }
+  #sCard {
+    grid-area: sCard;
+    background-color: #D9C7BB;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .titleServices {
+    text-align: center;
+    margin: 10vh;
+    padding: 3vh;
+    font-size: 3rem;
+  }
+  .sFlexCard {
+    width: 10vh;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-bottom: 30vh;
+    margin-top: 30vh;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .sContentCard {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10%;
+    padding: 3%;
+  }
+  .sPhoto {
+    width: 35vh;
+    margin: 10%;
+    padding: 7.5%;
+  }
+  .t2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1vh;
+  }
+  .p2 {
+    font-size: large;
+    text-align: center;
+  }
+}
+@media (max-width: 1023px) and (min-width: 602px) {
+  .gridBody {
+    display: grid;
+    grid-template-areas: "head head" "navBar card" "photo photo" "map map" "contact contact" "feet feet";
+    grid-template-columns: 1fr/3 1fr;
+  }
+  /*Header*/
+  .head {
+    grid-area: head;
+    margin-top: 0.5vh;
+    background-color: #fff;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .largeLogo {
+    width: 20%;
+  }
+  /*NAV*/
+  .flexNav {
+    grid-area: navBar;
+    margin-top: 0.5vh;
+    width: 25vh;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .spanIndex {
+    color: blue;
+    background-color: rgba(230, 230, 230, 0.082);
+    border-radius: 20px;
+    border: inset black 2px;
+    font-size: medium;
+    padding: 3%;
+    margin: 5%;
+  }
+  .spanIndex:hover {
+    color: #fff;
+    animation-name: color;
+    animation-duration: 1s;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+  }
+  a:hover {
+    animation-name: color;
+    animation-duration: 1s;
+  }
+  .flexSpan {
+    width: 20vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+  }
+  .smallLogo {
+    display: none;
+  }
+  /*Cards*/
+  section#cardS {
+    margin-top: 0.5vh;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .pCard {
+    margin: 3%;
+    pad: 3%;
+  }
+  .flexCard {
+    width: 80%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #C4C4C4;
+  }
+  .cardPhoto {
+    width: 95%;
+    padding: 2vh;
+    margin: 1vh;
+    border-radius: 20px;
+  }
+  .cardText {
+    width: 80%;
+    margin: 1vh;
+    padding: 1vh;
+  }
+  .t1 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .p1 {
+    display: none;
+  }
+  /*Map*/
+  section#map {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5vh;
+    grid-area: map;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .textMap {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+  }
+  .t3 {
+    font-size: 3rem;
+    margin: 10%;
+    padding: 3%;
+  }
+  .p3 {
+    margin: 10%;
+    font-size: large;
+  }
+  .mapIframe {
+    width: 50%;
+    height: 75%;
+  }
+  .iframe {
+    width: 70%;
+    height: 75%;
+    padding: 10%;
+    margin: 5%;
+    border-radius: 20px;
+  }
+  /*contact*/
+  section#contact {
+    margin-top: 0.5vh;
+    width: 100%;
+    grid-area: contact;
+    background-image: url(../sources/gallery/planta.png);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .bContact {
+    margin: 2%;
+    padding: 2%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 50%;
+    text-decoration: double;
+    font-size: 2rem;
+  }
+  .bContact:hover {
+    border: 2px solid #000;
+  }
+  .bName {
+    text-align: center;
+    color: #fff;
+  }
+  /*Gallery Index*/
+  section#photos {
+    width: 100%;
+    margin-top: 0.5vh;
+    grid-area: photo;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #D9C7BB;
+    justify-content: center;
+  }
+  .galleryIndex {
+    width: 20%;
+    padding: 2vh;
+    margin: 3vh;
+  }
+  .galleryIndex:hover {
+    filter: opacity(60%);
+  }
+  /*Footer*/
+  .footerFlex {
+    grid-area: feet;
+    margin-top: 0.5vh;
+    background-color: #D9C7BB;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerLogo {
+    width: 25%;
+    margin-left: 10%;
+    padding: 5%;
+  }
+  .logoF {
+    width: 30%;
+  }
+  .linksF {
+    width: 30%;
+    text-decoration: underline 1px;
+  }
+  .footerL {
+    padding: 3%;
+    margin: 5%;
+  }
+  .bodyServices {
+    display: grid;
+    grid-template-areas: "sHead sHead" "navBar title" "sCard sCard" "feet feet";
+    grid-template-columns: 1fr 6fr;
+  }
+  .sHead {
+    grid-area: sHead;
+    background-color: #D9C7BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5vh;
+  }
+  .flexNav {
+    background-color: #D9C7BB;
+    margin-top: 0px;
+  }
+  .flexSpan {
+    width: 25vh;
+    text-align: center;
+  }
+  .sectionTitle {
+    grid-area: title;
+    background-color: #D9C7BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .t4 {
+    text-align: center;
+    background-color: #D9C7BB;
+    font-size: 2rem;
+  }
+  #sCard {
+    grid-area: sCard;
+    background-color: #D9C7BB;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.5vh;
+  }
+  .titleServices {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .sContentCard {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .sFlexCard {
+    width: 80%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 3%;
+    margin: 10%;
+  }
+  .sPhoto {
+    width: 50%;
+  }
+  .cardText {
+    width: 100%;
+  }
+  .t2 {
+    margin-left: 5vh;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1vh;
+  }
+  .p2 {
+    margin-left: 5vh;
+    text-align: center;
+    width: 50%;
+    font-size: large;
+  }
+}
+@media (max-width: 601px) and (min-width: 350px) {
+  .gridBody {
+    display: grid;
+    grid-template-areas: "navBar" "head" "card" "photo" "contact" "map" "feet";
+    grid-template-rows: auto auto auto auto 2fr 3fr auto;
+  }
+  /*Header*/
+  .head {
+    grid-area: head;
+    margin-top: 0.5vh;
+    background-color: #fff;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .largeLogo {
+    width: 60%;
+  }
+  /*NAV*/
+  .flexNav {
+    grid-area: navBar;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .spanIndex {
+    color: blue;
+    background-color: rgba(230, 230, 230, 0.082);
+    border-radius: 20px;
+    border: inset black 2px;
+    font-size: medium;
+    padding: 3%;
+    margin: 5%;
+  }
+  .spanIndex:hover {
+    color: #fff;
+    animation-name: color;
+    animation-duration: 1s;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+  }
+  a:hover {
+    animation-name: color;
+    animation-duration: 1s;
+  }
+  .flexSpan {
+    width: 20vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .smallLogo {
+    display: none;
+  }
+  /*Cards*/
+  section#cardS {
+    margin-top: 0.5vh;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .pCard {
+    margin: 1vh;
+    padding: 0.5vh;
+  }
+  .flexCard {
+    width: 80%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background-color: #C4C4C4;
+  }
+  .cardPhoto {
+    width: 85%;
+    padding: 2vh;
+    margin: 1vh;
+    border-radius: 20px;
+  }
+  .cardText {
+    width: 80%;
+    margin: 1vh;
+    padding: 1vh;
+  }
+  .t1 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .p1 {
+    display: none;
+  }
+  /*Map*/
+  section#map {
+    height: auto;
+    margin-top: 0.5vh;
+    grid-area: map;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .textMap {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+  }
+  .t3 {
+    font-size: 1.5rem;
+    margin: 10%;
+    padding: 3%;
+  }
+  .p3 {
+    display: none;
+    margin: 10%;
+    font-size: large;
+  }
+  .mapIframe {
+    width: 60%;
+    height: 75%;
+  }
+  .iframe {
+    width: 70%;
+    height: 75%;
+    padding: 10%;
+    margin: 5%;
+    border-radius: 20px;
+  }
+  /*contact*/
+  section#contact {
+    margin-top: 0.5vh;
+    width: 100%;
+    grid-area: contact;
+    background-image: url(../sources/gallery/planta.png);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .bContact {
+    margin: 2%;
+    padding: 2%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 50%;
+    text-decoration: double;
+    font-size: 1rem;
+  }
+  .bContact:hover {
+    border: 2px solid #000;
+  }
+  .bName {
+    text-align: center;
+    color: #fff;
+  }
+  /*Gallery Index*/
+  section#photos {
+    margin-top: 0.5vh;
+    grid-area: photo;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #D9C7BB;
+    justify-content: space-evenly;
+  }
+  .galleryIndex {
+    width: 20%;
+    padding: 0.3vh;
+    margin: 0.5vh;
+  }
+  .galleryIndex:hover {
+    filter: opacity(60%);
+  }
+  /*Footer*/
+  .footerFlex {
+    grid-area: feet;
+    margin-top: 0.5vh;
+    background-color: #D9C7BB;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerLogo {
+    width: 25%;
+    margin-left: 10%;
+    padding: 5%;
+  }
+  .logoF {
+    width: 50%;
+  }
+  .linksF {
+    width: 50%;
+    text-decoration: underline 1px;
+    font-style: italic;
+  }
+  .footerL {
+    padding: 3%;
+    margin: 5%;
+  }
+  .bodyServices {
+    display: grid;
+    grid-template-areas: "sHead navBar" "title title" "sCard sCard" "feet feet";
+  }
+  .sHead {
+    grid-area: sHead;
+    background-color: #D9C7BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flexNav {
+    background-color: #D9C7BB;
+    margin-top: 0px;
+  }
+  .flexSpan {
+    width: 25%;
+    text-align: center;
+    font-size: small;
+  }
+  .spanIndex {
+    width: max-content;
+  }
+  .largeLogo {
+    width: 60%;
+  }
+  .sectionTitle {
+    margin-top: 0.5vh;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    grid-area: title;
+    background-color: #D9C7BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .t4 {
+    text-align: center;
+    background-color: #D9C7BB;
+    font-size: 2rem;
+  }
+  #sCard {
+    grid-area: sCard;
+    background-color: #D9C7BB;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.5vh;
+  }
+  .titleServices {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .sContentCard {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sFlexCard {
+    width: 80%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 3%;
+    margin: 10%;
+  }
+  .sPhoto {
+    width: 80%;
+  }
+  .cardText {
+    width: 100%;
+  }
+  .t2 {
+    margin-left: 14vh;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1vh;
+  }
+  .p2 {
+    margin-left: 14vh;
+    text-align: center;
+    width: 50%;
+    font-size: large;
+  }
+}
+@media (max-width: 349px) {
+  .gridBody {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
